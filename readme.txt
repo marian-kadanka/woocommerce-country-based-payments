@@ -28,3 +28,6 @@ If you need to have certain payment gateway to be available in all countries, do
 
 = 1.0 =
 * Initial release.
+
+= 1.1 =
+* Fix 'Invalid payment method' error
