@@ -4,7 +4,7 @@
 Plugin Name: WooCommerce - Country Based Payments
 Plugin URI:  http://URI_Of_Page_Describing_Plugin_and_Updates
 Description: Choose in which country certain payment gateway will be available
-Version:     1.1
+Version:     1.1.2
 Author:      Ivan Paulin
 Author URI:  http://ivanpaulin.com
 License:     GPL2
