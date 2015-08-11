@@ -4,7 +4,7 @@ Donate link: http://ivanpaulin.com/
 Tags: woocommerce, payment gateway, country, countries, payment gateways, country payment
 Requires at least: 4.0
 Tested up to: 4.2.2
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,3 +31,6 @@ If you need to have certain payment gateway to be available in all countries, do
 
 = 1.1 =
 * Fix 'Invalid payment method' error
+
+= 1.1.1 =
+* Update readme.txt file
