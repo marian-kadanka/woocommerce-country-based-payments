@@ -47,16 +47,18 @@ class WCCBPSettings {
      */
     public function createFields()
     {
-        $available_gateways = WC()->payment_gateways->get_available_payment_gateways();
+        $available_gateways = WC()->payment_gateways->payment_gateways();
 
         $fields = array();
 
         foreach($available_gateways as $gateway) {
-            $fields[] = array(
-                    'title'   => $gateway->method_title ? $gateway->method_title : $gateway->id,
-                    'type'    => 'multi_select_countries',
-                    'id'      => $this->id . '_' . $gateway->id,
-                );
+            if ( $gateway->enabled === 'yes' ) {
+                $fields[] = array(
+                        'title'   => $gateway->method_title ? $gateway->method_title : $gateway->id,
+                        'type'    => 'multi_select_countries',
+                        'id'      => $this->id . '_' . $gateway->id,
+                    );
+            }
         }
 
         return $fields;
