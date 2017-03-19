@@ -30,7 +30,9 @@ class WoocommerceCountryBasedPayment {
     {
         $this->id = 'wccbp';
 
-        add_action('woocommerce_loaded', array($this, 'loadSettings'));
+        if ( is_admin() ) {
+            add_action('woocommerce_loaded', array($this, 'loadSettings'));
+        }
 
         add_action('woocommerce_checkout_update_order_review', array($this, 'setSelectedCountry'), 10);
 
