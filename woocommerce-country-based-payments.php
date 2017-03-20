@@ -96,7 +96,7 @@ class WoocommerceCountryBasedPayment {
     public function available_payment_gateways_after_cancelation( $payment_gateways )
     {
     	$order_id = wc_get_order_id_by_order_key( $_GET['key'] );
-    	$order = new WC_Order($order_id);
+    	$order = wc_get_order($order_id);
 			$billing_address = $order->get_address();
 			$this->selected_country = $billing_address['country'];
 
